@@ -203,7 +203,7 @@ export default function App() {
 
             <div className="flex flex-wrap gap-3 fade-up delay-1">
               <a href="#projects" className="btn-primary"><Folder size={15} /> View Projects ↘</a>
-              <a href="/Suryansh_Mani_Resume.pdf" target="_blank" className="btn-outline"><FileText size={15} /> Resume</a>
+              <a href="https://drive.google.com/file/d/1zb85j3pO6PLyeh1Dis_geJhbE4gPaRiM/view?usp=drive_link" target="_blank" className="btn-outline"><FileText size={15} /> Resume</a>
               <a href="https://github.com/SuryanshMani2704" target="_blank" className="btn-outline"><Github size={15} /> GitHub</a>
               <a href="https://www.linkedin.com/in/suryansh-mani/" target="_blank" className="btn-outline"><Linkedin size={15} /> LinkedIn</a>
             </div>
