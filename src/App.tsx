@@ -1,138 +1,154 @@
-import React from 'react';
-import { 
-  Mail, 
-  Linkedin, 
-  Github, 
-  ExternalLink, 
-  MapPin, 
-  Code2, 
-  Layout, 
-  Server, 
-  Database, 
-  Brain, 
-  BarChart3, 
+import React from "react";
+import {
+  Mail,
+  Linkedin,
+  Github,
+  ExternalLink,
+  MapPin,
+  Code2,
+  Layout,
+  Server,
+  Database,
+  Brain,
+  BarChart3,
   Cloud,
-  FileText,
   ArrowRight,
-  Briefcase
-} from 'lucide-react';
+  Briefcase,
+} from "lucide-react";
 
 export default function App() {
   const experiencesData = [
     {
       company: "Greenwich Research & Development",
       role: "Project Intern",
-      description: "Built a gaming intelligence platform using APIs, Discord automation, analytics, and email workflows."
+      description:
+        "Built a gaming intelligence platform using APIs, Discord automation, analytics, and email workflows.",
     },
     {
       company: "Mercor",
       role: "Business Analytics Intern",
-      description: "Worked on SQL, ETL, dashboards, and stakeholder reporting."
+      description:
+        "Worked on SQL, ETL, dashboards, and stakeholder reporting.",
     },
     {
       company: "AlgoBulls",
       role: "Sales Associate & Data Analyst",
-      description: "Worked on analytics, financial products, technical demos, and client onboarding."
+      description:
+        "Worked on analytics, financial products, technical demos, and client onboarding.",
     },
     {
       company: "Tutoratti.ai",
       role: "Database Management Intern",
-      description: "Worked on ML models, education analytics, and dashboards."
-    }
+      description:
+        "Worked on ML models, education analytics, and dashboards.",
+    },
   ];
 
   const projectsData = [
     {
       title: "Metascope AI",
       tagline: "Gaming Intelligence Platform",
-      description: "Tracks live Twitch viewership, Steam active players, and community sentiment to rank meta shifts in real time.",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
+      description:
+        "Tracks live Twitch viewership, Steam active players, and community sentiment to rank meta shifts in real time.",
+      image: "/images/metascope.png",
       tech: ["React", "FastAPI", "Supabase", "Firebase", "Discord", "APIs"],
-      github: "https://github.com/SuryanshMani2704"
+      demo: "https://metascope.gg",
+      privateRepo: true,
     },
     {
       title: "CorpConnect",
       tagline: "AI Recruiting Platform",
-      description: "Enterprise-grade AI hiring ecosystem featuring automated RAG candidate screening, opening pipelines, and semantic match scores.",
-      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
+      description:
+        "Enterprise-grade AI hiring ecosystem featuring automated candidate screening, opening pipelines, and semantic match scores.",
+      image: "/images/corpconnect.png",
       tech: ["React", "Express", "Supabase", "Gemini API", "Recharts"],
-      github: "https://github.com/SuryanshMani2704"
+      github: "https://github.com/SuryanshMani2704",
+      demo: "#",
+      privateRepo: false,
     },
     {
       title: "SmartEdge",
       tagline: "IoT Dashboard",
-      description: "Low-latency edge monitoring dashboard rendering real-time MQTT telemetry streams, interactive topology nodes, and instant alerts.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      description:
+        "Low-latency edge monitoring dashboard rendering real-time MQTT telemetry streams, interactive topology nodes, and instant alerts.",
+      image: "/images/smartedge.png",
       tech: ["React", "MQTT", "Firebase", "Realtime Dashboard"],
-      github: "https://github.com/SuryanshMani2704"
+      github: "https://github.com/SuryanshMani2704",
+      demo: "#",
+      privateRepo: false,
     },
     {
       title: "Smart Helmet",
       tagline: "IoT + Embedded System",
-      description: "Hardware safety system powered by ESP32 microcontrollers integrating real-time GPS coordinates, impact sensors, and emergency alerts.",
-      image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80",
+      description:
+        "Hardware safety system powered by ESP32 integrating GPS coordinates, impact sensors, navigation support, and emergency alerts.",
+      image: "/images/helmet.png",
       tech: ["ESP32", "GPS", "Sensors", "PCB", "Navigation", "Crash Detection"],
-      github: "https://github.com/SuryanshMani2704"
+      github: "https://github.com/SuryanshMani2704",
+      demo: "#",
+      privateRepo: false,
     },
     {
       title: "AI Interview Bot",
       tagline: "AI Interview Evaluation Tool",
-      description: "Autonomous voice-enabled conversational agent utilizing LLMs to conduct technical interviews and generate comprehensive evaluation reports.",
+      description:
+        "Autonomous voice-enabled conversational agent using LLMs to conduct technical interviews and generate evaluation reports.",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
       tech: ["Python", "LLMs", "Speech", "Evaluation"],
-      github: "https://github.com/SuryanshMani2704"
-    }
+      github: "https://github.com/SuryanshMani2704",
+      demo: "#",
+      privateRepo: false,
+    },
   ];
 
   const skillsData = [
     {
       category: "Programming",
       icon: <Code2 className="w-5 h-5 text-[#00FF66]" />,
-      items: ["Python", "TypeScript", "JavaScript", "SQL", "C++", "HTML5/CSS3"]
+      items: ["Python", "TypeScript", "JavaScript", "SQL", "C++", "HTML/CSS"],
     },
     {
       category: "Frontend",
       icon: <Layout className="w-5 h-5 text-[#00FF66]" />,
-      items: ["React.js", "Next.js", "Vite", "Tailwind CSS", "Redux Toolkit"]
+      items: ["React", "Vite", "Tailwind CSS", "Next.js", "Redux"],
     },
     {
       category: "Backend",
       icon: <Server className="w-5 h-5 text-[#00FF66]" />,
-      items: ["Node.js", "Express.js", "FastAPI", "RESTful APIs", "GraphQL", "WebSockets"]
+      items: ["FastAPI", "Node.js", "Express", "REST APIs", "WebSockets"],
     },
     {
       category: "Databases",
       icon: <Database className="w-5 h-5 text-[#00FF66]" />,
-      items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "Pgvector", "InfluxDB"]
+      items: ["PostgreSQL", "Supabase", "Firebase", "MongoDB", "MySQL"],
     },
     {
       category: "AI/ML",
       icon: <Brain className="w-5 h-5 text-[#00FF66]" />,
-      items: ["Gemini API", "OpenAI API", "LangChain", "PyTorch", "Vector Embeddings", "RAG"]
+      items: ["Gemini API", "OpenAI API", "PyTorch", "scikit-learn", "RAG"],
     },
     {
       category: "Analytics",
       icon: <BarChart3 className="w-5 h-5 text-[#00FF66]" />,
-      items: ["Data Modeling", "SQL Querying", "Tableau", "Pandas & NumPy", "A/B Testing"]
+      items: ["SQL", "Pandas", "NumPy", "Tableau", "Power BI"],
     },
     {
       category: "Cloud & Tools",
       icon: <Cloud className="w-5 h-5 text-[#00FF66]" />,
-      items: ["Git & GitHub", "Docker", "AWS Basic", "Vercel / Cloud Run", "CI/CD Pipelines"]
-    }
+      items: ["Git", "GitHub", "Docker", "Vercel", "Render", "CI/CD"],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-[#00FF66] selection:text-black font-sans">
-      
-      {/* Navigation */}
-      <nav className="border-b border-white/10 bg-[#050505] sticky top-0 z-50">
+      <nav className="border-b border-white/10 bg-[#050505]/90 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <a href="#" className="font-bold text-lg tracking-tight flex items-center gap-1">
             <span>Suryansh Mani</span>
             <span className="text-[#00FF66] font-mono">.</span>
           </a>
-          <div className="flex items-center gap-6 text-sm font-medium text-white/70">
+
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-white/70">
             <a href="#about" className="hover:text-[#00FF66] transition-colors">About</a>
             <a href="#experience" className="hover:text-[#00FF66] transition-colors">Experience</a>
             <a href="#projects" className="hover:text-[#00FF66] transition-colors">Projects</a>
@@ -143,11 +159,9 @@ export default function App() {
       </nav>
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 py-16">
-        
-        {/* Hero Section */}
         <section className="pt-12 sm:pt-20 pb-8 flex flex-col items-start space-y-6 max-w-4xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-white/80">
-            <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse" />
             <span>Available for Software Engineering roles</span>
             <span className="text-white/30">•</span>
             <span className="flex items-center gap-1 text-white/60">
@@ -164,34 +178,45 @@ export default function App() {
           </p>
 
           <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a 
-              href="#contact" 
+            <a
+              href="#projects"
               className="bg-[#00FF66] text-black font-semibold px-6 py-3 rounded-lg hover:bg-[#00e65c] transition-colors flex items-center gap-2 text-sm sm:text-base"
             >
-              <span>Contact Me</span>
+              <span>View Projects</span>
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
             </a>
 
-            <a 
-              href="#skills" 
-              className="bg-white/5 hover:bg-white/10 text-white border border-white/15 px-6 py-3 rounded-lg font-medium transition-colors text-sm sm:text-base flex items-center gap-2"
+            <a
+              href="/Suryansh_Mani_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/5 hover:bg-white/10 text-white border border-white/15 px-6 py-3 rounded-lg font-medium transition-colors text-sm sm:text-base"
             >
-              <span>Explore Skills</span>
+              Resume
             </a>
 
-            <a 
-              href="https://github.com/SuryanshMani2704" 
-              target="_blank" 
+            <a
+              href="https://github.com/SuryanshMani2704"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-white/70 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors text-sm sm:text-base flex items-center gap-2"
             >
               <Github className="w-4 h-4" />
               <span>GitHub</span>
             </a>
+
+            <a
+              href="https://www.linkedin.com/in/suryansh-mani/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/70 hover:text-white px-4 py-3 rounded-lg font-medium transition-colors text-sm sm:text-base flex items-center gap-2"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </section>
 
-        {/* About Section */}
         <section id="about" className="border-t border-white/10 pt-20">
           <div className="space-y-4 mb-8">
             <span className="text-xs font-mono text-[#00FF66] tracking-widest uppercase">01 / About</span>
@@ -200,31 +225,27 @@ export default function App() {
 
           <div className="bg-[#0c0c0c] border border-white/10 rounded-2xl p-6 sm:p-10 max-w-4xl space-y-6">
             <p className="text-lg sm:text-xl text-white/90 leading-relaxed font-light">
-              B.Tech in Artificial Intelligence & Data Science, multiple internships, experience building production-ready AI applications, analytics dashboards, API platforms, and full-stack products.
+              I'm a Software Engineer with experience building AI applications, analytics dashboards,
+              backend APIs, and full-stack products. I enjoy turning complex ideas into deployed software
+              that solves real user problems across AI, analytics, and product engineering.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
-              <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                <div className="text-2xl font-bold text-[#00FF66]">5+</div>
-                <div className="text-xs text-white/60 mt-1">Production AI Apps</div>
-              </div>
-              <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                <div className="text-2xl font-bold text-[#00FF66]">4</div>
-                <div className="text-xs text-white/60 mt-1">Core Internships</div>
-              </div>
-              <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                <div className="text-2xl font-bold text-[#00FF66]">IEEE</div>
-                <div className="text-xs text-white/60 mt-1">NLP Publication</div>
-              </div>
-              <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                <div className="text-2xl font-bold text-[#00FF66]">1st</div>
-                <div className="text-xs text-white/60 mt-1">Viz-A-Thon Winner</div>
-              </div>
+              {[
+                ["5+", "Production AI Apps"],
+                ["4", "Core Internships"],
+                ["IEEE", "NLP Publication"],
+                ["1st", "Viz-A-Thon Winner"],
+              ].map(([value, label]) => (
+                <div key={label} className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div className="text-2xl font-bold text-[#00FF66]">{value}</div>
+                  <div className="text-xs text-white/60 mt-1">{label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Experience Section */}
         <section id="experience" className="border-t border-white/10 pt-20">
           <div className="space-y-4 mb-12">
             <span className="text-xs font-mono text-[#00FF66] tracking-widest uppercase">02 / Experience</span>
@@ -255,7 +276,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section */}
         <section id="projects" className="border-t border-white/10 pt-20">
           <div className="space-y-4 mb-12">
             <span className="text-xs font-mono text-[#00FF66] tracking-widest uppercase">03 / Featured Work</span>
@@ -264,17 +284,16 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectsData.map((project) => (
-              <div 
-                key={project.title} 
+              <div
+                key={project.title}
                 className="group bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66]/80 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_-10px_rgba(0,255,102,0.15)] flex flex-col justify-between"
               >
                 <div>
                   <div className="relative h-48 w-full overflow-hidden bg-white/5 border-b border-white/10">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      referrerPolicy="no-referrer"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" 
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent opacity-90" />
                     <span className="absolute bottom-3 left-4 text-xs font-mono text-[#00FF66] bg-black/80 backdrop-blur-md px-2.5 py-1 rounded border border-white/10">
@@ -283,14 +302,24 @@ export default function App() {
                   </div>
 
                   <div className="p-6 space-y-4">
-                    <h3 className="font-bold text-xl text-white tracking-tight group-hover:text-[#00FF66] transition-colors">{project.title}</h3>
+                    <h3 className="font-bold text-xl text-white tracking-tight group-hover:text-[#00FF66] transition-colors">
+                      {project.title}
+                    </h3>
+
+                    {project.privateRepo && (
+                      <p className="text-xs font-mono text-[#00FF66] bg-[#00FF66]/10 border border-[#00FF66]/20 rounded-lg px-3 py-2">
+                        Private repository. Live product available for demonstration.
+                      </p>
+                    )}
+
                     <p className="text-sm text-white/70 font-light leading-relaxed">
                       {project.description}
                     </p>
+
                     <div className="flex flex-wrap gap-1.5 pt-2">
                       {project.tech.map((t) => (
-                        <span 
-                          key={t} 
+                        <span
+                          key={t}
                           className="text-[11px] font-mono px-2.5 py-1 rounded bg-white/[0.04] text-white/80 border border-white/10 group-hover:border-white/20 transition-colors"
                         >
                           {t}
@@ -300,23 +329,48 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="px-6 pb-6 pt-2 flex justify-end">
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-white/70 hover:text-[#00FF66] py-2 px-3 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-[#00FF66]/30 transition-all"
-                  >
-                    <Github className="w-3.5 h-3.5" />
-                    <span>View Code</span>
-                  </a>
+                <div className="px-6 pb-6 pt-2 flex justify-end gap-3">
+                  {project.privateRepo ? (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono text-white/80 hover:text-[#00FF66] py-2 px-3 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-[#00FF66]/30 transition-all"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      <span>Open Platform</span>
+                    </a>
+                  ) : (
+                    <>
+                      {project.demo && project.demo !== "#" && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-mono text-white/80 hover:text-[#00FF66] py-2 px-3 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-[#00FF66]/30 transition-all"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          <span>Live Demo</span>
+                        </a>
+                      )}
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-mono text-white/80 hover:text-[#00FF66] py-2 px-3 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-[#00FF66]/30 transition-all"
+                      >
+                        <Github className="w-3.5 h-3.5" />
+                        <span>View Code</span>
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Skills Section */}
         <section id="skills" className="border-t border-white/10 pt-20">
           <div className="space-y-4 mb-12">
             <span className="text-xs font-mono text-[#00FF66] tracking-widest uppercase">04 / Technical Matrix</span>
@@ -325,8 +379,8 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillsData.map((group) => (
-              <div 
-                key={group.category} 
+              <div
+                key={group.category}
                 className="bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66]/40 rounded-xl p-6 transition-colors flex flex-col justify-between space-y-6"
               >
                 <div className="space-y-4">
@@ -339,8 +393,8 @@ export default function App() {
 
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((item) => (
-                      <span 
-                        key={item} 
+                      <span
+                        key={item}
                         className="text-xs font-mono px-3 py-1.5 rounded-md bg-white/5 text-white/80 border border-white/10"
                       >
                         {item}
@@ -357,19 +411,18 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="border-t border-white/10 pt-20 pb-16">
           <div className="space-y-4 mb-8">
             <span className="text-xs font-mono text-[#00FF66] tracking-widest uppercase">05 / Connect</span>
             <h2 className="text-3xl font-bold tracking-tight text-white">Get In Touch</h2>
             <p className="text-white/60 max-w-xl text-sm leading-relaxed">
-              Whether you're looking to discuss high-impact engineering opportunities, collaborate on an AI product, or review my technical background, feel free to reach out.
+              Looking for Software Engineering, Backend Engineering, and Applied AI roles.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">
-            <a 
-              href="mailto:suryanshbest@gmail.com" 
+            <a
+              href="mailto:suryanshbest@gmail.com"
               className="bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66] p-6 rounded-xl transition-all group flex flex-col justify-between h-36"
             >
               <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#00FF66] group-hover:bg-[#00FF66] group-hover:text-black transition-colors">
@@ -381,9 +434,9 @@ export default function App() {
               </div>
             </a>
 
-            <a 
-              href="https://www.linkedin.com/in/suryansh-mani/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/suryansh-mani/"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66] p-6 rounded-xl transition-all group flex flex-col justify-between h-36"
             >
@@ -396,9 +449,9 @@ export default function App() {
               </div>
             </a>
 
-            <a 
-              href="https://github.com/SuryanshMani2704" 
-              target="_blank" 
+            <a
+              href="https://github.com/SuryanshMani2704"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66] p-6 rounded-xl transition-all group flex flex-col justify-between h-36"
             >
@@ -412,20 +465,17 @@ export default function App() {
             </a>
           </div>
         </section>
-
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-white/10 bg-[#030303] py-8 text-center text-xs font-mono text-white/40">
         <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>© {new Date().getFullYear()} Suryansh Mani. Built with React & Tailwind CSS.</div>
           <div className="flex items-center gap-1 text-[#00FF66]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00FF66]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00FF66]" />
             <span>Ready for hire</span>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
