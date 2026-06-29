@@ -182,7 +182,7 @@ export default function App() {
 
           <div className="mb-20 flex flex-wrap items-center justify-between gap-6">
             <p className="mono text-[10px] tracking-[0.35em] text-white/55">
-              <span className="text-[#00FF66]">●</span> AVAILABLE FOR SWE ROLES · PUNE, INDIA
+              <span className="text-[#00FF66]">●</span> AVAILABLE FOR SWE ROLES · INDIA
             </p>
             <p className="mono hidden text-[10px] tracking-[0.35em] text-white/35 md:block">
               PORTFOLIO / 2026 EDITION
@@ -222,7 +222,7 @@ export default function App() {
 
               <div className="mt-10 grid max-w-xl grid-cols-2 gap-6 border-t border-white/10 pt-8">
                 <MiniInfo label="Role" value="Software Engineer" />
-                <MiniInfo label="Based" value="India" />
+                <MiniInfo label="Based" value="Pune ,India" />
                 <MiniInfo label="Status" value="Open to Roles" green />
                 <MiniInfo label="Focus" value="AI · Backend · Data" />
               </div>
