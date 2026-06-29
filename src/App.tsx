@@ -14,6 +14,7 @@ import {
   Cloud,
   ArrowRight,
   Briefcase,
+  Cpu
 } from "lucide-react";
 
 export default function App() {
