@@ -45,30 +45,40 @@ export default function App() {
     {
       title: "Metascope AI",
       tagline: "Gaming Intelligence Platform",
+      description: "Tracks live Twitch viewership, Steam active players, and community sentiment to rank meta shifts in real time.",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80",
       tech: ["React", "FastAPI", "Supabase", "Firebase", "Discord", "APIs"],
       github: "https://github.com/SuryanshMani2704"
     },
     {
       title: "CorpConnect",
       tagline: "AI Recruiting Platform",
+      description: "Enterprise-grade AI hiring ecosystem featuring automated RAG candidate screening, opening pipelines, and semantic match scores.",
+      image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
       tech: ["React", "Express", "Supabase", "Gemini API", "Recharts"],
       github: "https://github.com/SuryanshMani2704"
     },
     {
       title: "SmartEdge",
       tagline: "IoT Dashboard",
+      description: "Low-latency edge monitoring dashboard rendering real-time MQTT telemetry streams, interactive topology nodes, and instant alerts.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
       tech: ["React", "MQTT", "Firebase", "Realtime Dashboard"],
       github: "https://github.com/SuryanshMani2704"
     },
     {
       title: "Smart Helmet",
       tagline: "IoT + Embedded System",
+      description: "Hardware safety system powered by ESP32 microcontrollers integrating real-time GPS coordinates, impact sensors, and emergency alerts.",
+      image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80",
       tech: ["ESP32", "GPS", "Sensors", "PCB", "Navigation", "Crash Detection"],
       github: "https://github.com/SuryanshMani2704"
     },
     {
       title: "AI Interview Bot",
       tagline: "AI Interview Evaluation Tool",
+      description: "Autonomous voice-enabled conversational agent utilizing LLMs to conduct technical interviews and generate comprehensive evaluation reports.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
       tech: ["Python", "LLMs", "Speech", "Evaluation"],
       github: "https://github.com/SuryanshMani2704"
     }
@@ -256,29 +266,46 @@ export default function App() {
             {projectsData.map((project) => (
               <div 
                 key={project.title} 
-                className="bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66]/40 rounded-xl p-6 transition-colors flex flex-col justify-between space-y-6"
+                className="group bg-[#0c0c0c] border border-white/10 hover:border-[#00FF66]/80 rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_30px_-10px_rgba(0,255,102,0.15)] flex flex-col justify-between"
               >
-                <div className="space-y-3">
-                  <h3 className="font-bold text-xl text-white tracking-tight">{project.title}</h3>
-                  <p className="text-xs font-mono text-[#00FF66]">{project.tagline}</p>
-                  <div className="flex flex-wrap gap-1.5 pt-3">
-                    {project.tech.map((t) => (
-                      <span 
-                        key={t} 
-                        className="text-[11px] font-mono px-2.5 py-1 rounded bg-white/5 text-white/70 border border-white/10"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                <div>
+                  <div className="relative h-48 w-full overflow-hidden bg-white/5 border-b border-white/10">
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0c] via-transparent to-transparent opacity-90" />
+                    <span className="absolute bottom-3 left-4 text-xs font-mono text-[#00FF66] bg-black/80 backdrop-blur-md px-2.5 py-1 rounded border border-white/10">
+                      {project.tagline}
+                    </span>
+                  </div>
+
+                  <div className="p-6 space-y-4">
+                    <h3 className="font-bold text-xl text-white tracking-tight group-hover:text-[#00FF66] transition-colors">{project.title}</h3>
+                    <p className="text-sm text-white/70 font-light leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 pt-2">
+                      {project.tech.map((t) => (
+                        <span 
+                          key={t} 
+                          className="text-[11px] font-mono px-2.5 py-1 rounded bg-white/[0.04] text-white/80 border border-white/10 group-hover:border-white/20 transition-colors"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 flex justify-end">
+                <div className="px-6 pb-6 pt-2 flex justify-end">
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-xs font-mono text-white/80 hover:text-[#00FF66] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-white/70 hover:text-[#00FF66] py-2 px-3 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-[#00FF66]/30 transition-all"
                   >
                     <Github className="w-3.5 h-3.5" />
                     <span>View Code</span>
